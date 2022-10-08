@@ -1,11 +1,14 @@
 server:
-  port: 8761
+  port: 9001
 
 spring:
   application:
     name: eureka-service
 
+# 애플리케이션을 Eureka 서버로 기동
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka
