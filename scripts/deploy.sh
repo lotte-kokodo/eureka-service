@@ -1,5 +1,5 @@
 export DOCKER_ID="nykwon"
-export SERVICE_NAME="order"
+export SERVICE_NAME="eureka"
 
 # 가동중인 컨테이너 중단 및 삭제
 sudo docker ps -a -q --filter "name=$SERVICE_NAME" | grep -q . && docker stop $SERVICE_NAME && docker rm $SERVICE_NAME | true
